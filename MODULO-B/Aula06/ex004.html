@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando Strings e Números</title>
+    <style>
+        body { 
+            background-color: rgb(9, 194, 132);
+            color: whitesmoke;
+            font: normal 20pt Verdana ;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script> 
+    var nome = window.prompt('Qual é seu nome?') // O método prompt() exibe uma caixa de diálogo que solicita ao usuário que insira um valor. O valor inserido é retornado como uma string e pode ser armazenado em uma variável para uso posterior no código.
+
+    document.write(`Seja bem-vindo(a) <strong>${nome}</strong>, seu nome tem ${nome.length} letras.<br>`) // O método length é usado para obter o número de caracteres em uma string. Ele retorna um valor inteiro que representa a quantidade de caracteres presentes na string, incluindo espaços e caracteres especiais.
+
+    document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br>`) // O método toUpperCase() é usado para converter todos os caracteres de uma string para maiúsculas. Ele retorna uma nova string com todos os caracteres convertidos para maiúsculas, sem modificar a string original.
+
+    document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}<br>`) // O método toLowerCase() é usado para converter todos os caracteres de uma string para minúsculas. Ele retorna uma nova string com todos os caracteres convertidos para minúsculas, sem modificar a string original.
+    </script>
+</body>
+</html>
