@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Digite o nome do seu país: <input type="text" name="país" id="país">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="resp"></div>
+    <script>
+        function verificar() {
+            var nacionalidade = document.querySelector('input#país');
+            var resp = document.querySelector('div#resp');
+
+            resposta.innerHTML = `<p>O seu país de origem é ${país}</p>`;
+        }
+    </script>
+</body>
+</html>
