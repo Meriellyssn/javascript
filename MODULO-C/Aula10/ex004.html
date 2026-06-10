@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Números</title>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+        /* Define a largura e o espaçamento dos campos de entrada de número */
         input[type="number"] {
             width: 50px;
             padding: 5px;
             margin-right: 10px;
         }
+        /* Define o espaçamento interno do botão de ação */
         input[type="button"] {
             padding: 5px 10px;
         }
+        /* Define o destaque visual para o container do resultado */
         #res {
             margin-top: 20px;
             font-size: 1.2em;
@@ -25,20 +29,35 @@
 </head>
 <body>
     <h1>Somando Valores</h1>
+    
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
+    
     <input type="button" value="Somar" onclick="somar()">
+    
     <div id="res">
         Resultado
     </div>
+
     <script>
+        /**
+         * Executa a captura dos valores dos inputs, realiza o cálculo de soma
+         * e renderiza o resultado formatado na tela.
+         */
         function somar() {
+            // Referencia os elementos do DOM (Document Object Model)
             var tn1 = document.getElementById('txtn1');
-            var tn2 = document.querySelector('input#txtn2');
+            var tn2 = document.querySelector('input#txtn2'); // Exemplo alternativo utilizando seletor CSS
             var res = document.getElementById('res');
+            
+            // Converte os valores textuais dos inputs em tipos numéricos válidos
             var n1 = Number(tn1.value);
             var n2 = Number(tn2.value);
+            
+            // Realiza a operação aritmética de adição
             var soma = n1 + n2;
+            
+            // Renderiza o resultado interpolado dentro do container HTML, destacando o total em negrito
             res.innerHTML = `A soma entre ${n1} + ${n2} é igual = <strong>${soma}</strong>`;
         }
     </script>
